@@ -7,8 +7,8 @@ class Post < ActiveRecord::Base
 
   def comments_attributes=(comment_attributes)
     comment_attributes.values.each do |comment_attribute|
-      category = Category.find_or_create_by(category_attribute)
-      self.post_categories.build(comment: comment)
+      comment = Comment.find_or_create_by(comment_attribute)
+      self.post_comments.build(comment: comment)
     end
   end
 
