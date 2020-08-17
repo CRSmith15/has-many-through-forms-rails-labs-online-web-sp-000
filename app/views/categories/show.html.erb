@@ -1,7 +1,7 @@
 <h2><%= @category.name %>
 <ul>
   <%= @category.post.each do |post| %>
-    <li><%= link_to post.title, post_path(post)
+    <li><%= link_to post.title, post_path(post) %></li>
     <li><%= post.comment %></li>
   <% end %>
 </ul>
