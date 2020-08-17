@@ -1,3 +1,6 @@
-category_1 = Category.create(name: "category")
-post_1 = Post.create(title: "Feeling Groovy", content: "I'm feeling so groovy")
-post_1.categories << category_1
+<h1><% @user.username %> has commented on these posts: </h1>
+<ul>
+  <%= @user.posts.each do |post| %>
+    <li><%= link_to(post.title, post) %></li>
+  <% end %>
+</ul>
